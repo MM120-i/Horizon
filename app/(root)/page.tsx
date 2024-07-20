@@ -3,6 +3,9 @@ import RightSidebar from "@/components/RightSidebar";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 import { getLoggedInUser } from "@/lib/actions/user.actions";
 
+// STOPPED AT 3:08:17
+// BACKEND SITE: https://cloud.appwrite.io/console/project-6699ddef003b78d6af5e/auth
+
 const Home = async () => {
   const loggedIn = await getLoggedInUser();
 
