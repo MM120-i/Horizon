@@ -4,6 +4,9 @@ import { getLoggedInUser } from "@/lib/actions/user.actions";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 
+// BACKEND STIE: https://cloud.appwrite.io/console/project-6699ddef003b78d6af5e/auth
+// STOPPED AT: 3:24:10
+
 export default async function RootLayout({
   children,
 }: Readonly<{
