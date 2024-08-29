@@ -3,6 +3,12 @@ import React from "react";
 import Image from "next/image";
 import BankCard from "./BankCard";
 
+/**
+ * BACKEND SITE: https://cloud.appwrite.io/console/project-6699ddef003b78d6af5e/auth/user-669b3de3000e71c3e145
+ * SECURITY SITE: https://mahim-e6.sentry.io/issues/?referrer=sidebar
+ * STOPPED AT: 3:35:23
+ */
+
 const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
   return (
     <aside className="right-sidebar">
