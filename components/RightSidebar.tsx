@@ -3,12 +3,6 @@ import React from "react";
 import Image from "next/image";
 import BankCard from "./BankCard";
 
-/**
- * BACKEND SITE: https://cloud.appwrite.io/console/project-6699ddef003b78d6af5e/auth/user-669b3de3000e71c3e145
- * SECURITY SITE: https://mahim-e6.sentry.io/issues/?referrer=sidebar
- * STOPPED AT: 3:35:23
- */
-
 const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
   return (
     <aside className="right-sidebar">
@@ -17,11 +11,13 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
         <div className="profile">
           <div className="profile-img">
             <span className="text-5xl font-bold text-blue-500">
-              {user?.name[0]}
+              {user.firstName[0]}
             </span>
           </div>
           <div className="profile-details">
-            <h1 className="profile-name">{user?.name}</h1>
+            <h1 className="profile-name">
+              {user.firstName} {user.lastName}
+            </h1>
             <p className="profile-email">{user?.email}</p>
           </div>
         </div>
@@ -42,7 +38,7 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
               <BankCard
                 key={banks[0].$id}
                 account={banks[0]}
-                userName={user?.name}
+                userName={`${user.firstName} ${user.lastName}`}
                 showBalance={false}
               />
             </div>
@@ -51,7 +47,7 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
                 <BankCard
                   key={banks[1].$id}
                   account={banks[1]}
-                  userName={user?.name}
+                  userName={user?.firstName}
                   showBalance={false}
                 />
               </div>

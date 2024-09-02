@@ -11,6 +11,13 @@ import {
   exchangePublicToken,
 } from "@/lib/actions/user.actions";
 
+/**
+ * A PlaidLink component that handles user bank connections.
+ *
+ * @param {PlaidLinkProps} user - The user object containing information for the bank connection.
+ * @param {string} variant - The variant of the button to be displayed (primary, ghost, or default).
+ * @return {JSX.Element} A button element that triggers the bank connection flow.
+ */
 const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
   const router = useRouter();
 
